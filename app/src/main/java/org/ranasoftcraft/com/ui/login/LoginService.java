@@ -11,6 +11,7 @@ import org.ranasoftcraft.com.data.model.LoggedInUser;
 import org.ranasoftcraft.com.R;
 import org.ranasoftcraft.com.services.CustomRestTemplate;
 
+import java.util.Map;
 import java.util.logging.Logger;
 
 public class LoginService {
@@ -37,11 +38,16 @@ public class LoginService {
     @RequiresApi(api = Build.VERSION_CODES.O)
     public LoginResult login(String username, String password) {
         logger.info("username {"+username+"} password {"+password+"}");
-        customRestTemplate.login(username, password);
+        if(username == null || "".equalsIgnoreCase(username)) {
+            return new LoginResult(401);
+        }
+        if(password == null || "".equalsIgnoreCase(password)) {
+            return new LoginResult(401);
+        }
 
-        LoggedInUserView loggedInUserView = new LoggedInUserView("srana");
-        if("admin".equalsIgnoreCase(username)) {
-            return new LoginResult(loggedInUserView);
+        Map<String,String> tokens = customRestTemplate.login(username, password);
+        if(tokens !=null) {
+            return new LoginResult(tokens);
         } else {
             return new LoginResult(401);
         }

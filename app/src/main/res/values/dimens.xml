@@ -8,5 +8,7 @@
     <dimen name="loginCardRadius">20dp</dimen>
     <dimen name="loginViewsMargin">20dp</dimen>
 
+    <dimen name="sp24">20sp</dimen>
+
     <dimen name="signup_text_margin_top">10dp</dimen>
 </resources>

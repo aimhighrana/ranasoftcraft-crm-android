@@ -6,6 +6,7 @@ import android.support.v4.app.ListFragment;
 import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author sandeep.rana
@@ -19,6 +20,8 @@ public class Employee implements Serializable   {
     private String email;
 
     private String address;
+
+    private Set<String> roles;
 
     public String getUsername() {
         return username;
@@ -54,6 +57,14 @@ public class Employee implements Serializable   {
     public Employee setAddress(String address) {
         this.address = address;
         return this;
+    }
+
+    public Set<String> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(Set<String> roles) {
+        this.roles = roles;
     }
 
     public List<Employee> _defaultEmployee() {

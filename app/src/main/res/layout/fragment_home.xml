@@ -1,26 +1,205 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
-
-    <TextView
-        android:id="@+id/attendance_today_title"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="fill_parent"
+    android:layout_width="fill_parent"
+    android:id="@+id/home_page"
+    android:scrollbars="vertical"
+    >
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="8px"
-        android:textSize="20sp"
-        android:layout_marginBottom="@dimen/activity_vertical_margin">
-    </TextView>
+        android:orientation="vertical"
+        tools:context=".ui.home.HomeFragment">
+
+        <android.support.design.card.MaterialCardView
+            android:id="@+id/today_emp_stat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today employee attendance"
+                        android:textSize="@dimen/sp24"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/newsMoreTextSize"
+                        android:text="The attendance count is based on there punch in punch out !"
+                        />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <android.support.design.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Online 1"
+                        style="?attr/borderlessButtonStyle"
+                        />
+                    <android.support.design.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="On leave 2"
+                        android:layout_marginEnd="8dp"
+                        style="?attr/borderlessButtonStyle"
+                        />
+
+                    <android.support.design.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add new"
+                        android:id="@+id/add_new_employee"
+                        style="?attr/borderlessButtonStyle"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.design.card.MaterialCardView>
 
 
-    <ListView android:id="@+id/attendance_today"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:padding="10px"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </ListView>
+        <android.support.design.card.MaterialCardView
+            android:id="@+id/todat_expenses"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:ignore="MissingConstraints">
 
-</android.support.constraint.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today expenses"
+                        android:textSize="@dimen/sp24"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/newsMoreTextSize"
+                        android:text="The expenses which done through case / online."
+                        />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <android.support.design.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="10,200"
+                        style="?attr/borderlessButtonStyle"
+                        />
+                    <android.support.design.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20,546"
+                        style="?attr/borderlessButtonStyle"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.design.card.MaterialCardView>
+
+
+        <android.support.design.card.MaterialCardView
+            android:id="@+id/given_to_employee"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:ignore="MissingConstraints">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <!-- Title, secondary and supporting text -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Debit for employee"
+                        android:textSize="@dimen/sp24"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:textSize="@dimen/newsMoreTextSize"
+                        android:text="Total debited amount for employee as a salary"
+                        />
+
+                </LinearLayout>
+
+                <!-- Buttons -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:padding="8dp"
+                    android:orientation="horizontal">
+                    <android.support.design.button.MaterialButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Online 1"
+                        style="?attr/borderlessButtonStyle"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.design.card.MaterialCardView>
+
+
+    </LinearLayout>
+
+</ScrollView>

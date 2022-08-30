@@ -7,9 +7,11 @@
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout-w1240dp/login_activity.xml" value="0.1" />
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout-w936dp/login_activity.xml" value="0.1" />
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/employee_create_update.xml" value="0.15760869565217392" />
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/employee_list.xml" value="0.1" />
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/fragment_dashboard.xml" value="0.1765625" />
-        <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/fragment_home.xml" value="0.1156773211567732" />
+        <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/fragment_employee_create_update.xml" value="0.1" />
+        <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/fragment_notifications.xml" value="0.103125" />
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/login.xml" value="0.1062058526740666" />
         <entry key="..\:/Personal/Apps/ranasoftcraft-android/app/src/main/res/layout/login_activity.xml" value="0.2" />

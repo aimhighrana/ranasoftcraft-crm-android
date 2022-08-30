@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ui.employee.CreateUpdateEmployeeActivity">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/emp_phone_number_tinp"
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin">
+
+        <EditText
+            android:id="@+id/emp_phone_number"
+            style="@style/modifiedEditText"
+            android:hint="Phone number"
+            android:inputType="text"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/emp_name_tinp"
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin">
+
+        <EditText
+            android:id="@+id/emp_name"
+            style="@style/modifiedEditText"
+            android:hint="Name"
+            android:inputType="text"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/emp_address_tinp"
+        style="@style/parent"
+        android:layout_marginTop="@dimen/loginViewsMargin">
+
+        <EditText
+            android:id="@+id/emp_address"
+            style="@style/modifiedEditText"
+            android:hint="Address"
+            android:inputType="textFilter"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+
+    <android.support.design.button.MaterialButton
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:textAlignment="center"
+        android:id="@+id/create_update_emp_btn"
+        android:gravity="bottom"
+        android:text="Submit" />
+
+</LinearLayout>

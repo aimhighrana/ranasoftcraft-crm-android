@@ -5,7 +5,7 @@ package org.ranasoftcraft.com.services;
  */
 public class HttpUrls {
 
-    static String prefix = "http://localhost:1200";
+    static String prefix = "https://ranasoftcraft-crm-services.herokuapp.com";
 
     public String login() {
         return prefix + "/signin";

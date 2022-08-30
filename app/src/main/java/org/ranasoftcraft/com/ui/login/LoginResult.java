@@ -2,6 +2,8 @@ package  org.ranasoftcraft.com.ui.login;
 
 import android.support.annotation.Nullable;
 
+import java.util.Map;
+
 /**
  * Authentication result : success (user details) or error message.
  */
@@ -11,16 +13,18 @@ class LoginResult {
 
     private Integer error;
 
+    private Map<String, String> tokens;
+
     LoginResult(Integer error) {
         this.error = error;
     }
 
-    LoginResult(LoggedInUserView success) {
-        this.success = success;
+    LoginResult(Map<String, String> tokens) {
+        this.tokens = tokens;
     }
 
-    LoggedInUserView getSuccess() {
-        return success;
+    Map<String, String> getSuccess() {
+        return tokens;
     }
 
     Integer getError() {
