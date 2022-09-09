@@ -10,4 +10,12 @@ public class HttpUrls {
     public String login() {
         return prefix + "/signin";
     }
+
+    public String createUpdateEmployee(){
+        return prefix + "/admin/user/create";
+    }
+
+    public  String getEmployeeList() {
+        return prefix + "/admin/employee/_all";
+    }
 }

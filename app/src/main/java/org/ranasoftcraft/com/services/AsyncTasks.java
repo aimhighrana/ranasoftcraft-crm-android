@@ -11,6 +11,7 @@ import java.util.logging.Logger;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.ResponseBody;
 
 public class AsyncTasks extends AsyncTask<Request,String, Response> {
 
@@ -18,8 +19,8 @@ public class AsyncTasks extends AsyncTask<Request,String, Response> {
 
     private OkHttpClient client;
 
-    public AsyncTasks() {
-        this.client = new OkHttpClient();
+    public AsyncTasks(OkHttpClient client) {
+        this.client = client;
     }
     @Override
     protected void onPreExecute() {
@@ -31,7 +32,8 @@ public class AsyncTasks extends AsyncTask<Request,String, Response> {
     protected Response doInBackground(Request... requests) {
         try {
             onProgressUpdate("Start to hit http to server");
-            return this.client.newCall(requests[0]).execute();
+            Response res = this.client.newCall(requests[0]).execute();
+            return res;
         } catch (IOException e) {
             throw new LoginException(e.getMessage());
         }
@@ -46,5 +48,16 @@ public class AsyncTasks extends AsyncTask<Request,String, Response> {
     protected void onPostExecute(Response o) {
         logger.info(o.toString());
         super.onPostExecute(o);
+    }
+
+    public ResponseBody get(Request request) {
+        Response res = null;
+        try {
+            res = this.client.newCall(request).execute();
+            return res.body();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }

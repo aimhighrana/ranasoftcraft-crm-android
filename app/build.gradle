@@ -43,6 +43,11 @@ dependencies {
     implementation 'com.android.support:support-annotations:28.0.0'
     implementation("com.squareup.okhttp3:okhttp:4.10.0")
 
+    //noinspection GradleCompatible
+    implementation("com.android.support:cardview-v7:21.0.0-rc1")
+    //noinspection GradleCompatible
+    implementation("com.android.support:recyclerview-v7:21.0.0-rc1")
+
     api 'io.jsonwebtoken:jjwt-api:0.11.5'
     runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.11.5'
     runtimeOnly('io.jsonwebtoken:jjwt-orgjson:0.11.5') {

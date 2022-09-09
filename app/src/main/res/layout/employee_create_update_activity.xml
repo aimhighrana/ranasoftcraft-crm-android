@@ -17,7 +17,8 @@
             android:id="@+id/emp_phone_number"
             style="@style/modifiedEditText"
             android:hint="Phone number"
-            android:inputType="text"
+            android:inputType="phone"
+            android:maxLength="10"
             android:maxLines="1" />
     </android.support.design.widget.TextInputLayout>
 
@@ -49,13 +50,14 @@
 
 
     <android.support.design.button.MaterialButton
+        android:id="@+id/create_update_emp_btn"
         style="?attr/borderlessButtonStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:textAlignment="center"
-        android:id="@+id/create_update_emp_btn"
         android:gravity="bottom"
-        android:text="Submit" />
+        android:text="Submit"
+        android:textAlignment="center"
+        tools:ignore="RtlCompat" />
 
 </LinearLayout>

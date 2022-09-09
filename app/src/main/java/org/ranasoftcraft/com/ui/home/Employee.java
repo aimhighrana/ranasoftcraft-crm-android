@@ -21,7 +21,20 @@ public class Employee implements Serializable   {
 
     private String address;
 
-    private Set<String> roles;
+    private Set<Roles> roles;
+
+    private String password;
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public Employee setName(String name) {
+        this.name = name;
+        return this;
+    }
 
     public String getUsername() {
         return username;
@@ -59,11 +72,20 @@ public class Employee implements Serializable   {
         return this;
     }
 
-    public Set<String> getRoles() {
+    public String getPassword() {
+        return password;
+    }
+
+    public Employee setPassword(String password) {
+        this.password = password;
+        return this;
+    }
+
+    public Set<Roles> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<String> roles) {
+    public void setRoles(Set<Roles> roles) {
         this.roles = roles;
     }
 
